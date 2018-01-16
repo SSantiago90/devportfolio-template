@@ -34,11 +34,11 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
+$base-color: #6d59cf; 
+$base-color-hover: darken($base-color, 45%);
 
 // Define background colors
-$background: #fff;
+$background: #131120;
 $background-alt: #f2f2f5;
 
 // Define border colors
@@ -94,6 +94,21 @@ body {
     }
 }
 
+small{
+    opacity: 0.7;
+}
+
+.card_{    
+    @include transition(0.3s);
+}
+.card_:hover{
+    box-shadow: 0px 8px 15px #bbb;
+}
+
+.container{
+    text-align: center;
+}
+
 // No JS styles
 .no-js {
     #experience-timeline {
@@ -141,7 +156,7 @@ body {
 }
 
 header {
-    position: absolute;
+    //position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -153,13 +168,23 @@ header {
     animation-duration: 0.75s;
 
     ul {
-        display: inline-block;
+        opacity:0.5;
+        display: block;
+        position: fixed;
+        width:100%;
+        z-index: 999;
         background: $background;
         text-align: center;
-        padding: 10px;
+        padding: 4px;
         margin: 0;
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
+        @include transition();
+
+        &:hover{
+            opacity: 1;
+        }
+
     }
 
     li {
@@ -168,7 +193,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: lighten($base-color, 15%);
         padding: 10px;
 
         &:hover {
@@ -315,18 +340,25 @@ footer {
     box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
 }
 
-.heading {
+.heading{
     position: relative;
     display: inline-block;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: 500;
     margin: 0 0 30px 0;
+}
 
+.title{
+    font-weight: 700;
+    color: $base-color;
+}
+
+h2.heading,h1.heading{    
     &:after {
         position: absolute;
         content: '';
-        top: 100%;
-        height: 1px;
+        top: 105%;
+        height: 2px;
         width: 50px;
         left: 0;
         right: 0;
@@ -334,6 +366,15 @@ footer {
         background: $base-color;
     }
 }
+
+h3.heading {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
 
 .background-alt {
     background: $background-alt;
@@ -397,7 +438,7 @@ footer {
     z-index: 1;
 }
 
-#lead-down {
+#lead-down-hero {
     position: absolute;
     left: 0;
     right: 0;
@@ -414,7 +455,31 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid lighten($base-color, 10%);
+        text-align:center;
+    }
+
+    i {
+        animation: pulsate 1.5s ease;
+        animation-iteration-count: infinite;
+        padding-top: 5px;;
+    }
+}
+
+#lead-down{
+    position:relative;
+    margin-top: 50px;
+    z-index: 10;    
+    color: lighten($base-color, 15%);
+
+    span {
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        border: 3px solid lighten($base-color, 10%);
         text-align:center;
     }
 
@@ -445,8 +510,13 @@ footer {
     ---------------------------
 */
 
+.avatar{
+    height: 35vh;
+    border-radius: 100%;
+    margin-bottom: 30px;
+}
 #about {
-    padding: 75px 15px;
+    padding: 75px 15px 15px;
     border-bottom: 1px solid $border;
 
     h2 {
@@ -456,6 +526,7 @@ footer {
     p {
         color: $text;
         margin: 0;
+        line-height: 32px;
     }
 }
 
@@ -466,7 +537,7 @@ footer {
 */
 
 #experience {
-    padding: 50px 15px;
+    padding: 50px 15px 15px;
     text-align: center;
     border-bottom: 1px solid $border;
 
@@ -593,6 +664,7 @@ footer {
     padding: 15px;
     border: 1px solid $border;
     text-align: left;
+    height:85%;
 
     h3 {
         font-weight: 500;
@@ -637,9 +709,11 @@ footer {
 
     h2 {
         color: $heading;
-        margin-bottom: 50px;
-    }
+        margin-bottom: 50px;       
+   }
 }
+
+
 
 .project {
     position: relative;
@@ -652,14 +726,17 @@ footer {
 
 .project-image {
     float: left;
+    margin-right: 5px;
+
+    img{        
+        width:300px;
+    }
 }
 
 .project-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
+    position: relative;
+    margin-left: 50px;
+    padding: 7% 0 0;
 
     h3 {
         font-size: 1.5em;
@@ -672,6 +749,22 @@ footer {
         color: $text;
         margin: 0 0 15px 0;
         font-size: 0.9em;
+    }
+
+    .tags{
+        list-style: none;
+        font-size: small;
+        color: #aaa;
+
+        li {            
+           display: inline-block;
+           margin: 3px;
+           padding: 2px 5px;
+           color: $heading;
+           background: darken($background-alt, 5%);
+           list-style: none;
+           font-size: small;
+        }
     }
 }
 
@@ -700,14 +793,13 @@ footer {
 
     h2 {
         color: $heading;
-        margin-bottom: 50px;
+        margin-bottom: 25px;
     }
 
     ul {
-        display: block;
+       // display: block;
         margin: 0 auto;
         padding: 0;
-        max-width: 800px;
     }
 
     li {
@@ -719,9 +811,32 @@ footer {
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+        @include transition(0.25s);
+    }
+
+    li:hover{
+        background-color: $base-color;
+        cursor:pointer;
+        color: white;        
+    }
+
+    .heading{
+        margin: 20px 0 10px;
     }
 }
 
+.skill-icon{
+    color: $base-color;
+    line-height: 65px;
+    font-size: 2.7em;
+    display: block;
+    margin: 0 auto 15px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 3px solid lighten($base-color, 10%);
+    text-align:center;
+}
 /*
     -------------------------------
     ----- 10. Contact Styles -----
@@ -783,7 +898,10 @@ footer {
 
         &:hover {
             box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            cursor: pointer;
         }
+
+
     }
 }
 
@@ -870,6 +988,15 @@ footer {
 
 }
 
+//Large Devices ONLY
+
+@media only screen and (mix-width : 980px) {   
+    .gallery{
+        margin: 20px 10px;
+        padding:10px 80px;
+    }
+}
+
 // Medium Devices
 @media only screen and (max-width : 992px) {
 
@@ -897,9 +1024,11 @@ footer {
 
     #about {
         text-align: center;
+    }
 
-        p {
-            text-align: left;
+    .education-block {
+        h3, span {
+            float: none;
         }
     }
 
@@ -907,6 +1036,8 @@ footer {
 
 // Small Devices
 @media only screen and (max-width : 768px) {
+
+
 
     header {
         position: fixed;
@@ -927,20 +1058,22 @@ footer {
         box-shadow: none;
         border-radius: 0;
         width: 100%;
+        display: block;
+        padding: auto;
 
         li {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 9vh;
         }
     }
 
     #lead-content {
         h1 {
-            font-size: 2em;
+            font-size: 2.8em;
         }
 
         h2 {
-            font-size: 1.3em;
+            font-size: 1.8em;
         }
 
         a {
@@ -949,14 +1082,8 @@ footer {
     }
 
     #lead-down {
-        display: none;
-    }
-
-    .education-block {
-        h3, span {
-            float: none;
-        }
-    }
+        //display: none;
+    }    
 
     .project-image {
         display: none;
@@ -985,11 +1112,11 @@ footer {
 
     #lead-content {
         h1 {
-            font-size: 1.5em;
+            font-size: 2.2em;
         }
 
         h2 {
-            font-size: 1em;
+            font-size: 1.5em;
         }
 
         a {
@@ -998,4 +1125,189 @@ footer {
         }
     }
 
+}
+
+
+// *-------------------------
+// Individual Project Styles 
+// *-------------------------
+
+#lead.proy-dhinox {
+    position: relative;
+    height: 50vh;
+    min-height: 320px;
+    background: url(../images/proyectos/dhinox/banner.jpg);
+    background-size: cover;
+    padding: 15px;
+    overflow: hidden;
+}
+#lead-content.proy-dhinox {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+// Gallery styles
+
+.gallery{    
+    margin: 20px 10px;
+    padding:10px 10px;
+}
+
+.img-item:hover{
+    cursor: pointer;
+    cursor: zoom-in;
+
+}
+
+.modal-dialog .big{
+    max-width:70vw !important;
+}
+
+.modal-content>button[type=button].close{
+    position:fixed;
+    top:-15px;
+    right:-15px;
+    height:30px;
+    background: $base-color-hover;
+    width:30px;
+    border-radius: 100%;
+    color:white;
+    z-index: 99;
+}
+
+.modal-body{
+    padding:0px;
+
+    img{
+        width:100%;
+    }
+}
+//hover snippet
+.snip1577 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 230px;
+  //max-width: 315px;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  background: $base-color-hover;
+}
+
+.snip1577 *,
+.snip1577:before,
+.snip1577:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.snip1577 img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+
+.snip1577:before,
+.snip1577:after {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  content: '';
+  background-color: #fff;
+  z-index: 1;
+  opacity: 0;
+}
+
+.snip1577:before {
+  width: 0;
+  height: 1px;
+}
+
+.snip1577:after {
+  height: 0;
+  width: 1px;
+}
+
+.snip1577 figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px 20px;
+}
+
+.snip1577 h3,
+.snip1577 h4 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: normal;
+  opacity: 0;
+}
+
+.snip1577 h4 {
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+.snip1577 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.snip1577:hover img,
+.snip1577.hover img {
+  zoom: 1;
+  filter: alpha(opacity=20);
+  -webkit-opacity: 0.2;
+  opacity: 0.2;
+}
+
+.snip1577:hover:before,
+.snip1577.hover:before,
+.snip1577:hover:after,
+.snip1577.hover:after {
+  opacity: 1;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+
+.snip1577:hover:before,
+.snip1577.hover:before {
+  width: 40px;
+}
+
+.snip1577:hover:after,
+.snip1577.hover:after {
+  height: 40px;
+}
+
+.snip1577:hover h3,
+.snip1577.hover h3,
+.snip1577:hover h4,
+.snip1577.hover h4 {
+  opacity: 1;
+}
+
+.snip1577:hover h3,
+.snip1577.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+.snip1577:hover h4,
+.snip1577.hover h4 {
+  -webkit-transition-delay: 0.35s;
+  transition-delay: 0.35s;
 }

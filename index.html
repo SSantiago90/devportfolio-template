@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <title>Salkin Santiago || Portfolio </title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -20,44 +21,46 @@
     </div>
     <!-- End #mobile-menu-toggle -->
     <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
-        </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
+         <div id="mobile-menu-close">
+            <span>Cerrar</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>        
+             <ul id="menu" class="shadow">
+                <li>
+                    <a href="#about">Acerca de mí</a>
+                </li>
+                <li>
+                    <a href="#experience">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#education">Estudios</a>
+                </li>
+                <li>
+                    <a href="#projects">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#skills">Herramientas</a>
+                </li>
+                <li>
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>   
     </header>
     <!-- End header -->
 
     <div id="lead">
         <div id="lead-content">
-            <h1>Ryan Fitzgerald</h1>
-            <h2>Software Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <h1>Salkin Santiago</h1>
+            <h2>Desarrollador Web</h2>
+            <a href="./SalkinSantiagoCV.pdf" class="btn-rounded-white" download>Descargar Curriculum Vitae
+                <br><small>en formato PDF</small>
+            </a>
         </div>
         <!-- End #lead-content -->
 
         <div id="lead-overlay"></div>
 
-        <div id="lead-down">
-            <span>
+        <div id="lead-down-hero">
+            <span data-next="#lead">
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
             </span>
         </div>
@@ -67,165 +70,237 @@
 
     <div id="about">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
-                    </p>
-                </div>
+            <h2 class="heading">Acerca de mí</h2>
+            <div class="avatarr-ctn">
+                    <img class="card_ avatar" src="images/avatar_pic.jpg">         
             </div>
-        </div>
-    </div>
+            <div class="about-text col-md-12">
+                <p class="trunc">
+                        <strong>¡Hola!</strong> Soy Santiago, tengo 27 años, y actualmente resido en Paraná - Entre Ríos.<br>Trabajo como <strong>diseñador gráfico, editor de video y community manager</strong> en una empresa publicitaria.
+                        Sin embargo, mi vocación es el Desarrollo de aplicaciones y sitios web, por lo que dedico gran parte de mi tiempo libre a capacitarme en <strong><i>Full Stack Web Development</i></strong> y todo lo relacionado: diseño web, programación, maquetación, bases de datos, diseño adaptativo y móbil, experiencia de usuario, servidores, además de nuevas tecnologías y frameworks.
+                    </p>
+             </div>            
+            </div>
+            <div id="lead-down">
+                <span data-next="#about">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </span>
+            </div> 
+    </div>     
     <!-- End #about -->
 
     <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
+        <h2 class="heading">Experiencia Laboral</h2>
         <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            <div class='card_' data-date="Abril 2014 – Diciembre 2014">
+                <h3>Profesor de Computación</h3>
+                <h4>Universidad Autónoma de Entre Ríos</h4>                  
+                <p>Profesor de taller de computación para alumnos de pre-escolar y 6º grado del nivel Primario.<br>Esc. Nº 132 República de Chile - Paraná.
+                </p>
+            </div>           
+            <div class='card_' data-date="2015 – Actualidad">
+                <h3>Diseñador Gráfico | Editor</h3>
+                <h4>Film Graphic Solutions <small>| Empresa publicitaria</small></h4>
+                <p class="trunc">Diseño de material gráfico para instituciones y empresas: cartelería, tarjetas, diseño editorial, publicidad de prensa, publicidad digital, identidad corporativa, etc.
+                Además, administro las redes sociales de algunos de nuestros clientes: campañas publicitarias, gestión de anuncios, interacción con clientes, etc.
+                Por último <i>-en menor medida-</i> trabajo en edición de material audivisual: spots institucionales, publicidades para TV, coberturas de prensa, etc.
                 </p>
             </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+            <div class='card_' data-date="2017 – Actualidad">
+                <h3>Diseñador de Sitios Web</h3>
+                <h4>Independiente</h4>
+                <p>Creación de sitios web de forma independiente
+                <br>Paraná - Entre Ríos.
                 </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
+            </div>     
         </div>
+        <div id="lead-down">
+                <span data-next="#experience">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </span>
+        </div> 
     </div>
     <!-- End #experience -->
 
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
-            <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
+   <div id="education">
+     <h2 class="heading">Estudios</h2>
+      <div class="row">
+         <div class="col-lg-6 col-xl-5 offset-xl-1 col-md-12">       
+              <div class="card_ education-block">
+                  <h3>Técnico en Computación</h3>
+                  <span class="education-date">2002 - 2008</span>
+                  <h4>Esc. de Educación Técnica Nº 1 “Dr. C. Etchebarne”</h4>
+                  <p>Educación secundaria completa con orientación en Computación.<br>Villaguay - Entre Ríos</p>
+              </div>
+          </div>
+          <!-- End .education-block -->
+         <div class="col-lg-6 col-xl-5">
+              <div class="card_ education-block">
+                  <h3>Análisista en Sistemas | <small><i>en curso</i></small></h3>
+                  <span class="education-date">2012 - 2013</span>
+                  <h4>Facultad de Ciencia Y Tecnología - UADER</h4>
+                  <p>Oro Verde - Entre Ríos</p>
+              </div>
+          </div>
+      </div>
+          <!-- End .education-block -->
+      <div class="row">
+         <div class="col-lg-6 col-xl-5 offset-xl-1 col-md-12">       
+              <div class="card_ education-block">
+                  <h3>Administración de Sistemas GNU/Linux</h3>
+                  <span class="education-date">2013 - 2013</span>
+                  <h4>GUGLER - UADER</h4>
+                  <p>Curso de capacitación en sistemas operativos GNU/Linux.<br>Oro Verde - Entre Ríos</p>
+              </div>       
+          </div>    
+              <!-- End .education-block -->
+         <div class="col-lg-6 col-xl-5">
+                  <div class="card_ education-block">
+                      <h3>Desarrollo de Aplicaciones Móviles</h3>
+                      <span class="education-date">2016</span>
+                      <h4>Universidad Politécnica de Madrid</h4>
+                      <p>Desarrollo de aplicaciones web nativas para dispositivos móviles con sistema operativo Firefox, con HTML5, CSS3 y Javascript.<br>A distancia</p>
+                  </div>
+              </div>
+          </div>
+              <!-- End .education-block -->      
+          <div class="row">
+         <div class="col-lg-6 col-xl-5 offset-xl-1 col-md-12">       
+                  <div class="card_ education-block">
+                      <h3>Desarrollo en la Nube con Node.js</h3>
+                      <span class="education-date">2017</span>
+                      <h4>Universidad Politécnica de Madrid</h4>
+                      <p>Desarrollo de APPs y APIs REST con modelo MVC en servidores Node.js. Gestión de versiones con GitHub.<br>A distancia</p>
+                  </div>
+              </div>
+              <!-- End .education-block -->            
+         <div class="col-lg-6 col-xl-5">
+                  <div class="card_ education-block">
+                      <h3>Professional Program in Front-End Web Development</h3>
+                      <span class="education-date">2017 - 2018</span>
+                      <h4>Microsoft Academy - World Wide Web Consortium</h4>
+                      <p>Programa de formación a distancia de 12 Cursos abarcando distintas tecnologías. <br>A distancia</p>
+                  </div>
+              </div>
+              <!-- End .education-block -->
+          </div>
+          </div>
+          <div id="lead-down">
+              <span data-next="#education">
+                  <i class="fa fa-chevron-down" aria-hidden="true"></i>
+              </span>
+          </div> 
+      </div>
+      <!-- End #education -->    
     <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+        <h2 class="heading">Trabajos</h2>
         <div class="container">
             <div class="row">
-                <div class="project shadow-large">
+                     <!-- project start -->
+                <div class="card_ project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/proyectos/dhinox/avatar.png" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        <h3 class="title">Desarrollo de sitio Web | "Dhinox"</h3>                        
+                            <ul class='tags'>
+                                <li>Diseño Web</li>
+                                <li>Diseño Gráfico</li>
+                            </ul>
+                        <p class="trunc">
+                            Desarrollo integral del sitio web www.dhinox.com.ar:<br>Listado de productos, formularios de contacto, banners, edición de fotografías, diseño adaptable a dispositivos mobiles.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="proyecto_dhinox.html">Ver Proyecto</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-
-                <div class="project shadow-large">
+                <!-- project start -->
+                <div class="card_ project shadow-large">
                     <div class="project-image">
-                        <img src="images/project.jpg" />
+                        <img src="images/proyectos/dhinox/avatar.png" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                        <h3>Desarrollo de sitio Web | "Dhinox"</h3>                        
+                            <ul class='tags'>
+                                <li>Diseño Web</li>
+                                <li>Diseño Gráfico</li>
+                            </ul>
+                        <p class="trunc">
+                            Desarrollo integral del sitio web www.dhinox.com.ar:<br>Listado de productos, formularios de contacto, banners, edición de fotografías, diseño adaptable a dispositivos mobiles.
                         </p>
-                        <a href="#">View Project</a>
+                        <a href="proyecto_dhinox.html">Ver Proyecto</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
             </div>
         </div>
+         <div id="lead-down">
+                <span data-next="#projects">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </span>
+            </div> 
     </div>
     <!-- End #projects -->
 
     <div id="skills">
-        <h2 class="heading">Skills</h2>
-        <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-        </ul>
+        <h2 class="heading">Herramientas</h2>
+        <div class="tools-ctn">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <h3 class="heading">Diseño</h3>
+                    <span>
+                        <i class="skill-icon fa fa-pencil" aria-hidden="true"></i>
+                    </span>                    
+                            <ul>
+                                <li>Adobe Photoshop</li>
+                                <li>Adobe Illustrator</li>
+                                <li>Adobe InDesign</li>
+                                <li>Corel Draw</li>
+                            </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">                    
+                    <h3 class="heading">Video</h3>
+                     <span>
+                        <i class="skill-icon fa fa-step-forward" aria-hidden="true"></i>
+                    </span>
+                    <ul>
+                        <li>Adobe After Effects</li>
+                        <li>Sony Vegas</li>
+                        <li>Adobe Audition</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h3 class="heading">Desarrollo</h3>
+                    <span>
+                        <i class="skill-icon fa fa-code" aria-hidden="true"></i>
+                    </span>                    
+                    <ul>
+                        <li>HTML5</li>
+                        <li>Node.js</li>
+                        <li>Bootstrap</li>
+                        <li>Diseño Adaptativo</li>
+                        <li>GitHub</li>
+                        <li>Meteor</li>
+                        <li>Handlebars</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- End #skills -->
 
     <div id="contact">
-        <h2>Get in Touch</h2>
+        <h2>Contacto</h2>
         <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
+            <form method="POST" action="https://formspree.io/salkin.santiago@gmail.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
+                <input type="email" name="_replyto" placeholder="Ingresa tu Email..." required>
+                <textarea name="message" placeholder="Ingresa tu mensaje..." required></textarea>
+                <button type="submit">Enviar <i class="fa fa-paper-plane"></i></button>
             </form>
         </div>
         <!-- End #contact-form -->
@@ -237,7 +312,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017 YOUR NAME
+                        Copyright &copy; 2018 - Salkin Santiago<br><small>Powered by <a href="https://getbootstrap.com/">Bootstrap</a>, <a href="https://gulpjs.com/">Gulp</a>, <a href="https://www.sublimetext.com/">Sublime Text</a>, <a href="https://jquery.com/">Jquery</a>, &amp; <a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Dev Edition</a></small>.
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -248,19 +323,17 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/SSantiago90" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>                      
+                        <li>
+                            <a href="https://twitter.com/Santiago_Salkin" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
+                            <a href="mailto:salkin.santiago@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                         <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a type="button" class="wsp" data-toggle="modal" data-target="#exampleModal" href="">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -268,9 +341,28 @@
         </div>
     </footer>
     <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+    
+    <!-- Modal Whatsapp -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Teléfono Personal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                <p>Oops! Parece que este dispositivo no puede realizar llamadas telefónicas. Intenta comunicarte por otra vía al:</p>
+                <h4>(0343) 154 522 996</h2>
+          </div>          
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script src="js/shorten.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

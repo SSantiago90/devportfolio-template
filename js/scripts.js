@@ -1,23 +1,15 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.1
-    Last Change: 08/27/2017
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
-
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
-
 (function($) {
 
     // Remove no-js class
     $('html').removeClass('no-js');
 
+    // Detect device for whatsapp href
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        $('.wsp').attr("href",'tel:+543434522996');
+    }
+
     // Animate to section when nav is clicked
     $('header a').click(function(e) {
-
         // Treat as normal link if no-scroll class
         if ($(this).hasClass('no-scroll')) return;
 
@@ -27,7 +19,7 @@
 
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+        }, 500);
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
@@ -40,11 +32,12 @@
         $('html, body').animate({
             scrollTop: 0
         }, 500);
-    });
+    });    
 
     // Scroll to first element
-    $('#lead-down span').click(function() {
-        var scrollDistance = $('#lead').next().offset().top;
+    $('#lead-down span, #lead-down-hero span').click(function() {
+        var span = $(this);
+        var scrollDistance = $(span.attr('data-next')).next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
         }, 500);
@@ -92,6 +85,38 @@
         $(this).fadeOut(300, function() {
             $('#more-projects').fadeIn(300);
         });
+    });   
+
+    // Popup Modal
+    $(".js-pop").on("click", function() {
+        var imgsrc = $(this).find('img').attr('src')
+        if ($(this).hasClass('big')){
+           // here asign the image to the modal when the user click the enlarge link
+           $('#imagepreview').attr('src', imgsrc); 
+           // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+           $('#imagemodal').modal('show'); 
+       }
+       else{
+           $('#imagepreviewbig').attr('src', imgsrc); 
+           // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+           $('#imagemodalbig').modal('show'); 
+       }
     });
 
-})(jQuery);
+    //Shorten function 
+    var resize_text = function(w){ 
+        if(w<768){
+            $(".trunc").shorten({
+                "showChars" : 160
+            });
+        }
+    };
+
+    //shorten text if small device ON LOAD - browser friendly
+    var w = $(window).width();
+    resize_text(w);
+    //shorten text on RESIZE window - uses jquery
+    $(window).resize(function(){
+        resize_text($(window).width());
+    });    
+})(jQuery);                       
